@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <style>
+        .btn1{
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-left: 30%;
+            padding: 10px;
+            cursor: pointer;
+
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <div class="container">
+        <h1>Interactive Quiz</h1>
+        <div class="quiz1">
+            <p>1.What Is The Capital Of France?</p>
+            <input type="radio" name="Capital" id="Paris">Paris
+            <input type="radio" name="Capital">London
+            <input type="radio" name="Capital">Berlin
+
+        </div>
+        <div class="quiz2">
+            <p>2.Which planet is known as the Red Planet?</p>
+            <input type="radio" name="planet" id="Mars">Mars
+            <input type="radio" name="planet">Venus
+            <input type="radio" name="planet">Jupiter
+
+        </div>
+        <div class="quiz3">
+            <p>3.What is the largest mammel on Earth?</p>
+            <input type="radio" name="mammel">Elephant
+            <input type="radio" name="mammel" id="BlueWhale">BlueWhale
+            <input type="radio" name="mammel">Giraffe
+
+        </div>
+        <button class="btn1" id="btn">Submit</button>
+        <script>
+            var Ques1=document.getElementById("Paris")
+            var Ques2=document.getElementById("Mars")
+            var Ques3=document.getElementById("BlueWhale")
+            var btn=document.getElementById("btn")
+            var q=0
+            btn.addEventListener("click",function(){
+                if(Ques1.checked){
+                    q=q+1
+                }
+                if(Ques2.checked){
+                    q=q+1
+                }
+                if(Ques3.checked){
+                    q=q+1
+                }
+            document.write(`<h1>Interactive Quiz</h1>
+            Your Score Is:` +q)
+            })
+
+        </script>
+
+    </div>
+    <script>
+        
+    </script>
+    
+</body>
+</html>
